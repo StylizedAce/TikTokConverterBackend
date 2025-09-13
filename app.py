@@ -84,4 +84,8 @@ def download():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, use_reloader=True)
+    # For local development only
+    app.run(host="0.0.0.0", port=5000, debug=True)
+
+# For production deployment (Streamlit Cloud, Heroku, etc.)
+# The app object will be used by the WSGI server
